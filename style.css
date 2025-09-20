@@ -8,41 +8,38 @@ html,body{
     width: 100%;
     height: 100%;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
-main{
+.container{
     width: 400px;
-    height: 100%;
-    border: 2px solid black;
-    
- position: relative;
+    height: 600px;
+    border: 1px solid black;
+   position: relative;
 }
 
 .story{
     width: 100%;
-    height: 150px;
-    /* background-color: red; */
+    height: 100px;
+    /* background-color: aqua; */
     white-space: nowrap;
-    overflow-x: auto;
     /* overflow-y: hidden; */
-    padding-top: 20px;
-    
+    overflow-x: auto;
+    padding-top: 10px;
 }
-
 .story::-webkit-scrollbar{
     display: none;
 }
 .storiyan{
-    width: 100px;
-    height: 100px;
-    background-color: beige;
+    width: 80px;
+    height: 80px;
+    background-color: red;
     border-radius: 50%;
     display: inline-block;
     overflow: hidden;
+    border: 2px solid black;
+    margin-right: 5px;
     cursor: pointer;
-    border: 2px solid red;
-     /* position: relative; */
-
 }
 
 .storiyan img{
@@ -50,11 +47,94 @@ main{
     height: 100%;
     object-fit: cover;
     object-position: center;
-
+    
 }
 
-.seenStroy{
+.story-viewer{
+    width: 400px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.story-container{
+    width: 400px;
+    height: 600px;
+    background-color: aqua;
+    border-radius: 20px;
+    position: relative;
+}
+
+.stroy-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: linear-gradient(180deg, black 0% , transparent 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+.stroy-user-info{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.story-user-profile{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    object-fit: cover;
+}
+
+.story-user-details{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.story-username{
+    font-size: 14px;
+}
+.story-time{
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.close-story{
+    background-color: transparent;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.close-story:hover{
+    background-color: #4442426e;
+}
+
+.story-progress-container{
+    position: absolute;
+    top: 0;
+    left:0;
     width: 100%;
-    height: 450px;
-    background-color: blanchedalmond;
+    height: 2px;
+    background-color: #fff;
+    z-index: 100;
+}
+
+
+.story-progess-bar{
+    width: 100%;
+    height: 3px;
+    background-color: rgb(95, 90, 90);
+    border-radius: 2px;
+    overflow: hidden;
 }
