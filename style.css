@@ -57,6 +57,7 @@ html,body{
     position: fixed;
     top: 0;
     left: 0;
+    /* display: none; */
 }
 .story-container{
     width: 400px;
@@ -137,4 +138,49 @@ html,body{
     background-color: rgb(95, 90, 90);
     border-radius: 2px;
     overflow: hidden;
+}
+
+.story-progess-fill{
+    height: 100%;
+    background-color: white;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+.story-content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.story-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    /* border: 1px solid red; */
+}
+
+.stroy-navigation{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.stroy-prev,.story-next{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
 }
